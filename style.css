@@ -19,9 +19,9 @@ body {
 =================*/
 .card {
   background-color: hsl(244, 38%, 16%);
-  max-width: 100%;
-  margin: 9vh 5vw;
   border-radius: 10px;
+  margin: 9vh 5vw;
+  max-width: 100%;
 }
 
 /*================
@@ -29,9 +29,9 @@ body {
 ================*/
 .card__img-container {
   position: relative;
+  font-size: 0;
   max-width: 100%;
   min-height: auto;
-  font-size: 0;
 }
 
 .card__img-overlay {
@@ -42,9 +42,9 @@ body {
 }
 
 .card__img {
+  border-radius: 10px 10px 0 0;
   max-width: 100%;
   min-height: 100%;
-  border-radius: 10px 10px 0 0;
 }
 
 .card__img-desktop {
@@ -60,10 +60,10 @@ body {
 
 .card__heading {
   font-family: 'Inter', sans-serif;
-  font-size: 1.7rem;
+  font-size: max(2.45vw, 1.7rem);
   font-weight: 600;
-  text-align: center;
   margin: 0;
+  text-align: center;
 }
 
 .card__heading span {
@@ -71,10 +71,10 @@ body {
 }
 
 .card__description {
-  text-align: center;
-  line-height: 1.6;
   color: hsla(0, 0%, 100%, 0.5);
+  line-height: 1.6;
   margin-bottom: 2.5em;
+  text-align: center;
 }
 
 /*================
@@ -86,23 +86,24 @@ body {
 
 .card__stats-heading {
   font-family: 'Inter', sans-serif;
-  font-size: 1.5rem;
+  font-size: max(1.55vw, 1.5rem);
   font-weight: 500;
   margin-top: 1.15em;
   margin-bottom: 0;
 }
 
 .card__stats-item {
-  font-size: 0.85rem;
-  text-transform: uppercase;
   color: hsla(0, 0%, 100%, 0.5);
+  font-size: max(0.9vw, 0.85rem);
   margin-top: 0.42em;
+  text-transform: uppercase;
 }
 
 /*======================== 
     attribution footer 
 ========================*/
 .attribution {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -120,19 +121,19 @@ body {
 ===================*/
 @media (min-width: 600px) {
   .card {
-    margin: auto;
     display: flex;
     flex-direction: row-reverse;
-    width: 75%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: auto;
+    width: 75%;
   }
 
   .card__img-container {
-    width: 100%;
     min-height: auto;
+    width: 100%;
   }
 
   .card__img-mobile {
@@ -152,26 +153,25 @@ body {
   .card__padding {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: left;
-    padding: 0 0 0 4vw;
+    justify-content: center;
     margin-right: 0;
+    padding: 0 0 0 4vw;
   }
 
   .card__heading {
-    text-align: left;
-    max-width: 85%;
-    font-size: 2.45vw;
     font-weight: 500;
     margin-top: 0.3em;
     margin-bottom: 0.4em;
+    max-width: 85%;
+    text-align: left;
   }
 
   .card__description {
-    text-align: left;
-    max-width: 80%;
     font-size: 1vw;
     font-weight: 300;
+    max-width: 80%;
+    text-align: left;
   }
 
   .card__stats {
@@ -181,15 +181,17 @@ body {
 
   .card__stats-heading {
     text-align: left;
-    font-size: 1.55vw;
   }
 
   .card__stats-item {
-    font-size: 0.9vw;
     font-weight: 400;
   }
 
   .card__stats-item--middle {
     margin: auto 4.4vw;
+  }
+
+  .attribution {
+    display: unset;
   }
 }
