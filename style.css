@@ -1,0 +1,191 @@
+/*==================
+    font imports
+==================*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend+Deca:wght@200;300;400;700&display=swap');
+
+/*===================
+    global-layout
+===================*/
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/*=================
+    card-layout
+=================*/
+.card {
+  background-color: hsl(244, 38%, 16%);
+  max-width: 100%;
+  margin: 9vh 5vw;
+  border-radius: 10px;
+}
+
+/*================
+    card-image    
+================*/
+.card__img-container {
+  position: relative;
+  height: fit-content;
+  font-size: 0;
+}
+
+.card__img-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(106, 1, 172, 0.5);
+  border-radius: 10px 10px 0 0;
+}
+
+.card__img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__img-desktop {
+  display: none;
+}
+
+/*===============
+    card-text    
+===============*/
+.card__padding {
+  padding: 2.5em 1.95em 1.525em;
+}
+
+.card__heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.card__heading span {
+  color: hsl(277, 64%, 61%);
+}
+
+.card__description {
+  text-align: center;
+  line-height: 1.6;
+  color: hsla(0, 0%, 100%, 0.5);
+  margin-bottom: 2.5em;
+}
+
+/*================
+    card-stats    
+================*/
+.card__stats {
+  text-align: center;
+}
+
+.card__stats-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1.15em;
+  margin-bottom: 0;
+}
+
+.card__stats-item {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+  margin-top: 0.42em;
+}
+
+/*======================== 
+    attribution footer 
+========================*/
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 11px;
+  text-align: center;
+  z-index: -1;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*=================== 
+    media-queries 
+===================*/
+@media (min-width: 600px) {
+  .card {
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .card__img-container {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .card__img-mobile {
+    display: none;
+  }
+
+  .card__img-desktop {
+    display: unset;
+  }
+
+  .card__img,
+  .card__img-overlay {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card__padding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0 0 0 4vw;
+    margin-right: 0;
+  }
+
+  .card__heading {
+    text-align: left;
+    max-width: 90%;
+    font-size: 2.3vw;
+    margin-top: 0.3em;
+    margin-bottom: 0.4em;
+  }
+
+  .card__description {
+    text-align: left;
+    max-width: 80%;
+    font-size: 1.1vw;
+  }
+
+  .card__stats {
+    display: flex;
+    justify-content: left;
+  }
+
+  .card__stats-heading {
+    text-align: left;
+    font-size: 1.55vw;
+  }
+
+  .card__stats-item {
+    font-size: 0.9vw;
+    font-weight: 400;
+  }
+
+  .card__stats-item--middle {
+    margin: auto 3.5em;
+  }
+}
